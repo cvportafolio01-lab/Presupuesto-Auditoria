@@ -114,6 +114,82 @@ body{
     color:#666;
 }
 
+.proposal-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.proposal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.info-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.section-title {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.premium-card {
+    background: #ffffff;
+    border: 1px solid #eef1f4;
+    border-radius: 18px;
+    padding: 28px;
+    transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.label-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6c757d;
+    margin-bottom: 6px;
+}
+
+.value-text {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 18px;
+}
+
+.accent-line {
+    width: 50px;
+    height: 3px;
+    background: #198754;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .premium-card .col-md-6:first-child {
+        border-right: 1px solid #eef1f4;
+    }
+}
+.header-title {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+.sub-title {
+    font-weight: 500;
+}
+
+
 
 </style>
 </head>
@@ -128,44 +204,87 @@ body{
         <p class="sub-title">Auditoría Interna del Área de Cobranza</p>
     </div>
 
-    <!-- INFORMACION GENERAL -->
-    <div class="card-custom mb-4">
+
+<div class="card-custom mb-4">
+    <h4 class="section-title mb-3">
+        Información General
+    </h4>
+
+    <div class="premium-card">
+
+        <div class="accent-line"></div>
+
         <div class="row">
+
             <div class="col-md-6">
-                <p><strong>Empresa:</strong> [Empresa De Transporte]</p>
-                <p><strong>Giro:</strong> [Transporte]</p>
+                <div class="label-title">Empresa</div>
+                <div class="value-text">Empresa De Transporte</div>
+
+                <div class="label-title">Giro</div>
+                <div class="value-text">Transporte</div>
             </div>
+
             <div class="col-md-6">
-                <p><strong>Fecha:</strong> <span id="fecha"></span></p>
-                <p><strong>Modalidad:</strong> Auditoría Financiera Interna</p>
+                <div class="label-title">Fecha</div>
+                <div class="value-text">
+                    <span id="fecha"></span>
+                </div>
+
+                <div class="label-title">Modalidad</div>
+                <div class="value-text">Auditoría Financiera Interna</div>
             </div>
+
         </div>
-    </div>
 
-    <!-- PROPUESTA ECONOMICA -->
-    <div class="card-custom mb-4">
-        <h4 class="section-title mb-3">
-            <i class="bi bi-cash-coin icon-title text-success"></i>
-            Propuesta Económica
-        </h4>
-
-        <table class="table table-bordered align-middle text-center">
-            <thead>
-                <tr>
-                    <th>Concepto</th>
-                    <th>Costo</th>
-                    <th>Modalidad de Pago</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Honorarios por Auditoría Interna de Cobranza</td>
-                    <td><span class="badge bg-success">$30,000.00 MXN</span></td>
-                    <td><span class="badge bg-success">50% Inicio  - 50% al finalizar</span></td>
-                </tr>
-            </tbody>
-        </table>
     </div>
+</div>
+
+
+
+<!-- PROPUESTA ECONOMICA -->
+<!-- PROPUESTA ECONOMICA -->
+<div class="card-custom mb-4">
+    <h4 class="section-title mb-3">
+        Propuesta Económica
+    </h4>
+
+    <div class="premium-card">
+
+        <div class="accent-line"></div>
+
+        <div class="label-title">Concepto</div>
+        <div class="value-text mb-4">
+            Honorarios por Auditoría Interna de Cobranza
+        </div>
+
+        <div class="row text-center text-md-start">
+
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div class="label-title">Costo</div>
+                <div class="value-text">
+                   <span class="badge bg-success-subtle text-success fs-6 px-4 py-2 fw-semibold">
+
+                        $30,000.00 MXN
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="label-title">Modalidad de Pago</div>
+                <div class="value-text">
+                    <span class="badge bg-success-subtle text-success fs-6 px-4 py-2 fw-semibold">
+
+                        50% Inicio - 50% al finalizar
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
 
     <!-- CONTEXTO -->
     <div class="card-custom mb-4">
